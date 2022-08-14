@@ -103,10 +103,12 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQb-pH-wge">
-                                <rect key="frame" x="137" y="559" width="101" height="48"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <rect key="frame" x="109.5" y="559" width="156" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Log out"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="HAO-lS-Ile" kind="unwind" unwindAction="unwindSegue:" id="w7H-Gf-ZTS"/>
                                 </connections>
@@ -128,18 +130,20 @@
                             <constraint firstItem="Y3K-tT-nDV" firstAttribute="centerX" secondItem="okl-Fb-s5q" secondAttribute="centerX" id="grm-rd-O1f"/>
                             <constraint firstItem="dW2-9o-d5H" firstAttribute="leading" secondItem="KhA-3z-2IW" secondAttribute="leading" constant="25" id="k0B-5L-gEV"/>
                             <constraint firstItem="dW2-9o-d5H" firstAttribute="centerX" secondItem="okl-Fb-s5q" secondAttribute="centerX" id="k1x-UC-B9s"/>
+                            <constraint firstItem="vQb-pH-wge" firstAttribute="width" secondItem="okl-Fb-s5q" secondAttribute="height" multiplier="156:667" id="nOl-hF-cRK"/>
                             <constraint firstItem="dW2-9o-d5H" firstAttribute="top" secondItem="KhA-3z-2IW" secondAttribute="top" constant="100" id="p2L-fE-SnT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bup-dF-NVs"/>
                     <connections>
+                        <outlet property="logoutBottom" destination="vQb-pH-wge" id="mkY-Ry-W2n"/>
                         <outlet property="welcomeLabel" destination="P43-dh-uzs" id="3Ru-jo-5Bv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WYx-n7-yE7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="HAO-lS-Ile" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="875" y="84"/>
+            <point key="canvasLocation" x="874.39999999999998" y="83.208395802098963"/>
         </scene>
     </scenes>
     <resources>

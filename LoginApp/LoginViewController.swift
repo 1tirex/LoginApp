@@ -36,7 +36,7 @@ final class LoginViewController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String,
                                      sender: Any?) -> Bool {
-        if loginTF.text == "User" && passwordTF.text == "Password" {
+        if loginTF.text == login && passwordTF.text == password {
             return true
         } else {
             showAlert(with: "Oops!",
@@ -48,16 +48,21 @@ final class LoginViewController: UIViewController {
 //MARK: - IBAction
     
     @IBAction func forgotLoginBotton() {
-        showAlert(with: "Prompt", and: "Your login: User")
+        showAlert(with: "Prompt", and: "Your login: \(login)")
     }
     @IBAction func forgotPasswordBotton() {
-        showAlert(with: "Prompt", and: "Your password: Password")
+        showAlert(with: "Prompt", and: "Your password: \(password)")
     }
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
         guard segue.source is WelcomeViewController else { return }
         loginTF.text = ""
         passwordTF.text = ""
     }
+    
+// MARK: - Constants
+    
+    let login = "User"
+    let password = "Password"
 }
 
 //MARK: - extension
