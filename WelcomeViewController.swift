@@ -17,13 +17,10 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLabel.text = welcome
+        welcomeLabel.text = "Welcome, \(welcome ?? "")"
         changeColor()
         settingBottom()
     }
-    override var shouldAutorotate: Bool {
-            return false
-        }
     
     private func changeColor() {
         let gradientLayer = CAGradientLayer()
@@ -34,7 +31,7 @@ class WelcomeViewController: UIViewController {
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
 
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     private func settingBottom() {

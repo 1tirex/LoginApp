@@ -8,11 +8,16 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-
-//MARK: - @IBOutlet
+    
+    //MARK: - @IBOutlet
     
     @IBOutlet var loginTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
+    
+    // MARK: - Constants
+    
+    private let login = "User"
+    private let password = "Password"
     
     //MARK: - override func
     
@@ -23,15 +28,16 @@ final class LoginViewController: UIViewController {
         passwordTF.autocorrectionType = .no
         passwordTF.isSecureTextEntry = true
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let loginVC = segue.destination as? WelcomeViewController else { return }
-        loginVC.welcome = "Welcome, \(loginTF.text ?? "")"
+        loginVC.welcome = loginTF.text
     }
     
     override func touchesBegan(_ touches: Set<UITouch>,
                                with event: UIEvent?) {
-        self.view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String,
@@ -44,8 +50,8 @@ final class LoginViewController: UIViewController {
             return false
         }
     }
-
-//MARK: - IBAction
+    
+    //MARK: - IBAction
     
     @IBAction func forgotLoginBotton() {
         showAlert(with: "Prompt", and: "Your login: \(login)")
@@ -54,15 +60,9 @@ final class LoginViewController: UIViewController {
         showAlert(with: "Prompt", and: "Your password: \(password)")
     }
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
-        guard segue.source is WelcomeViewController else { return }
         loginTF.text = ""
         passwordTF.text = ""
     }
-    
-// MARK: - Constants
-    
-    let login = "User"
-    let password = "Password"
 }
 
 //MARK: - extension
