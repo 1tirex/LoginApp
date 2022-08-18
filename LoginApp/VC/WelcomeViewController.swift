@@ -36,7 +36,7 @@ class WelcomeViewController: UIViewController {
     
     private func settingBottom() {
         logoutBottom.layer.borderWidth = 1
-        logoutBottom.layer.borderColor = UIColor.darkGray.cgColor
+        logoutBottom.layer.borderColor = UIColor.white.cgColor
         logoutBottom.layer.cornerRadius = 15
     }
 }

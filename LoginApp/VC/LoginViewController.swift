@@ -15,9 +15,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     // MARK: - Constants
-    
-    private let login = "User"
-    private let password = "Password"
+    private let person = Person.getPerson()
     
     //MARK: - override func
     
@@ -32,6 +30,11 @@ final class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let loginVC = segue.destination as? WelcomeViewController else { return }
         loginVC.welcome = loginTF.text
+        
+        guard let navigationVC = segue.destination as? NavigationController else { return }
+        navigationVC.title = loginTF.text
+        guard let info = navigationVC.topViewController as? MyInfoViewController else { return }
+        info.person = person
     }
     
     override func touchesBegan(_ touches: Set<UITouch>,
@@ -42,7 +45,7 @@ final class LoginViewController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String,
                                      sender: Any?) -> Bool {
-        if loginTF.text == login && passwordTF.text == password {
+        if loginTF.text == person.login && passwordTF.text == person.password {
             return true
         } else {
             showAlert(with: "Oops!",
@@ -54,10 +57,10 @@ final class LoginViewController: UIViewController {
     //MARK: - IBAction
     
     @IBAction func forgotLoginBotton() {
-        showAlert(with: "Prompt", and: "Your login: \(login)")
+        showAlert(with: "Prompt", and: "Your login: \(person.login)")
     }
     @IBAction func forgotPasswordBotton() {
-        showAlert(with: "Prompt", and: "Your password: \(password)")
+        showAlert(with: "Prompt", and: "Your password: \(person.password)")
     }
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
         loginTF.text = ""
