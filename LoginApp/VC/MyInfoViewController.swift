@@ -22,8 +22,8 @@ class MyInfoViewController: UIViewController {
 
         name.text = person.info.name
         age.text = String(person.info.age)
-        hobby.text = person.info.hobby
-        facts.text = person.info.facts
+        hobby.text = person.info.hobby 
+        facts.text = person.info.facts 
         socialMedia.text = person.info.socialMedia
     }
 }

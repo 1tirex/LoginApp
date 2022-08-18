@@ -31,10 +31,22 @@ final class LoginViewController: UIViewController {
         guard let loginVC = segue.destination as? WelcomeViewController else { return }
         loginVC.welcome = loginTF.text
         
-        guard let navigationVC = segue.destination as? NavigationController else { return }
-        navigationVC.title = loginTF.text
-        guard let info = navigationVC.topViewController as? MyInfoViewController else { return }
-        info.person = person
+        guard let tabBar = segue.destination as? UITabBarController else { return }
+        guard let viewContolers = tabBar.viewControllers else { return }
+        
+        for viewContoler in viewContolers {
+            if let navigationVC = viewContoler as? UINavigationController {
+                guard let privateArea = navigationVC.topViewController as? PrivateAreaViewController else { return }
+                privateArea.title = loginTF.text
+                guard let info = segue.destination as? MyInfoViewController else { return }
+                info.person = person
+            }
+        }
+        
+//        guard let navigationVC = segue.destination as? NavigationController else { return }
+//        navigationVC.title = loginTF.text
+//        guard let info = navigationVC.topViewController as? MyInfoViewController else { return }
+//        info.person = person
     }
     
     override func touchesBegan(_ touches: Set<UITouch>,
