@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51055B7228AFC5B0001AC8F4 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51055B7128AFC5B0001AC8F4 /* PhotoViewController.swift */; };
 		51275F2628AD4BF90070515D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51275F2528AD4BF90070515D /* TabBarController.swift */; };
 		514475AA28A91A2B00F26298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514475A928A91A2B00F26298 /* AppDelegate.swift */; };
 		514475AC28A91A2B00F26298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514475AB28A91A2B00F26298 /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51055B7128AFC5B0001AC8F4 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		51275F2528AD4BF90070515D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		514475A628A91A2B00F26298 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		514475A928A91A2B00F26298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				515EF4D928AEC9B800974A88 /* NavigationController.swift */,
 				515EF4DB28AECA2F00974A88 /* PrivateAreaViewController.swift */,
 				515EF4DD28AECA4800974A88 /* MyInfoViewController.swift */,
+				51055B7128AFC5B0001AC8F4 /* PhotoViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				51275F2628AD4BF90070515D /* TabBarController.swift in Sources */,
 				515EF4DE28AECA4800974A88 /* MyInfoViewController.swift in Sources */,
 				514475AC28A91A2B00F26298 /* SceneDelegate.swift in Sources */,
+				51055B7228AFC5B0001AC8F4 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

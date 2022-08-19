@@ -1,19 +1,18 @@
 //
-//  TabBarController.swift
+//  PhotoViewController.swift
 //  LoginApp
 //
-//  Created by Илья on 17.08.2022.
+//  Created by Илья on 19.08.2022.
 //
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class PhotoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tabBarController?.tabBar.items![2].title = "More"
-//        tabBar.tag(2) = "More"
-        
+
+        // Do any additional setup after loading the view.
     }
     
 
