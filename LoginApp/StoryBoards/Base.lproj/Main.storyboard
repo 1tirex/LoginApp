@@ -255,25 +255,25 @@
                                     <segue destination="IcT-ET-le3" kind="presentation" modalTransitionStyle="flipHorizontal" id="jUC-GD-aEj"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7x-cp-6Aj" userLabel="Photo">
-                                <rect key="frame" x="57" y="568" width="300" height="100"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="W7x-cp-6Aj" userLabel="Photo">
+                                <rect key="frame" x="20" y="568" width="374" height="100"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="0E9-uj-T3x">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="0E9-uj-T3x">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="JJs-wg-o8n"/>
                                             <constraint firstAttribute="width" constant="100" id="bwZ-I6-w4T"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="UjA-DJ-8IY">
-                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="UjA-DJ-8IY">
+                                        <rect key="frame" x="137" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="eTe-51-Zla"/>
                                             <constraint firstAttribute="width" constant="100" id="rkc-DS-I9I"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog1" translatesAutoresizingMaskIntoConstraints="NO" id="uh8-OX-wDm">
-                                        <rect key="frame" x="200" y="0.0" width="100" height="100"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog1" translatesAutoresizingMaskIntoConstraints="NO" id="uh8-OX-wDm">
+                                        <rect key="frame" x="274" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="51T-gP-ORN"/>
                                             <constraint firstAttribute="width" constant="100" id="Ycv-ru-97G"/>
@@ -291,7 +291,9 @@
                             <constraint firstItem="ss6-2w-30V" firstAttribute="centerX" secondItem="Dp3-QY-73w" secondAttribute="centerX" id="Pkk-0n-mxF"/>
                             <constraint firstItem="bJp-9p-u5w" firstAttribute="leading" secondItem="GH2-ym-RZD" secondAttribute="leading" constant="30" id="U2x-6C-Gw6"/>
                             <constraint firstItem="ss6-2w-30V" firstAttribute="top" secondItem="rGw-Ff-cHG" secondAttribute="bottom" constant="14.5" id="Wix-uZ-abG"/>
+                            <constraint firstItem="GH2-ym-RZD" firstAttribute="trailing" secondItem="W7x-cp-6Aj" secondAttribute="trailing" constant="20" id="o83-k1-Srp"/>
                             <constraint firstItem="rGw-Ff-cHG" firstAttribute="top" secondItem="W7x-cp-6Aj" secondAttribute="bottom" constant="40" id="oCY-jT-ASv"/>
+                            <constraint firstItem="W7x-cp-6Aj" firstAttribute="leading" secondItem="GH2-ym-RZD" secondAttribute="leading" constant="20" id="rgn-37-1hh"/>
                             <constraint firstItem="ss6-2w-30V" firstAttribute="bottom" secondItem="GH2-ym-RZD" secondAttribute="bottom" constant="-20" id="v8s-Z2-xUg"/>
                             <constraint firstItem="bJp-9p-u5w" firstAttribute="top" secondItem="GH2-ym-RZD" secondAttribute="top" constant="30" id="wfF-J9-4WS"/>
                         </constraints>
@@ -313,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8D9-Fi-xg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3367" y="812"/>
+            <point key="canvasLocation" x="3366.666666666667" y="811.60714285714278"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="xQG-Ky-t6s">
@@ -408,7 +410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="08R-Sq-sKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4158" y="812"/>
+            <point key="canvasLocation" x="4097" y="812"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tRq-Om-DLb">
@@ -427,7 +429,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHZ-0l-ac6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874.39999999999998" y="83.208395802098963"/>
+            <point key="canvasLocation" x="1329" y="84"/>
         </scene>
         <!--More-->
         <scene sceneID="pxT-KN-vnR">
