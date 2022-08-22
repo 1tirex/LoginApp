@@ -7,8 +7,10 @@
 
 import UIKit
 
-class MyInfoViewController: UIViewController {
+final class MyInfoViewController: UIViewController {
 
+    //MARK: - @IBOutlet
+    
     @IBOutlet var name: UILabel!
     @IBOutlet var age: UILabel!
     @IBOutlet var from: UILabel!
@@ -39,6 +41,8 @@ class MyInfoViewController: UIViewController {
         me1.image = UIImage.init(named: "me")
         customImage(for: me1)
     }
+    
+    //MARK: - private func
     
     private func customImage(for sender: UIImageView) {
         sender.layer.masksToBounds = false
@@ -74,6 +78,8 @@ class MyInfoViewController: UIViewController {
         view.layer.addSublayer(gradient)
         }
 }
+
+//MARK: - extension
 
 extension CGPoint {
      static let topLeft = CGPoint(x: 0, y: 0)

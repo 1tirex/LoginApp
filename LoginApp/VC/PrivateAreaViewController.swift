@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PrivateAreaViewController: UIViewController {
+final class PrivateAreaViewController: UIViewController {
 
     var person: Person!
     

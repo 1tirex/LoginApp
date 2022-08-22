@@ -15,6 +15,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     // MARK: - Constants
+    
     private let person = Person.getPerson()
     
     //MARK: - override func
