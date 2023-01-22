@@ -16,9 +16,7 @@ final class PrivateAreaViewController: UIViewController {
         navigationItem.title = "Твой личный кабинет, \(person.info.name)"
     }
     
-
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let info = segue.destination as? MyInfoViewController else { return }
         info.person = person

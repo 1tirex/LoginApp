@@ -19,6 +19,7 @@
 		515EF4DC28AECA2F00974A88 /* PrivateAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EF4DB28AECA2F00974A88 /* PrivateAreaViewController.swift */; };
 		515EF4DE28AECA4800974A88 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EF4DD28AECA4800974A88 /* MyInfoViewController.swift */; };
 		515EF4E028AECAD500974A88 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EF4DF28AECAD500974A88 /* Person.swift */; };
+		A3879287297D7DD100778BF9 /* Extension CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3879286297D7DD100778BF9 /* Extension CGPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		515EF4DB28AECA2F00974A88 /* PrivateAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateAreaViewController.swift; sourceTree = "<group>"; };
 		515EF4DD28AECA4800974A88 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		515EF4DF28AECAD500974A88 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A3879286297D7DD100778BF9 /* Extension CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension CGPoint.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				514475A928A91A2B00F26298 /* AppDelegate.swift */,
 				514475AB28A91A2B00F26298 /* SceneDelegate.swift */,
+				A3879286297D7DD100778BF9 /* Extension CGPoint.swift */,
 			);
 			path = SupportFiles;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				515EF4DE28AECA4800974A88 /* MyInfoViewController.swift in Sources */,
 				514475AC28A91A2B00F26298 /* SceneDelegate.swift in Sources */,
 				51055B7228AFC5B0001AC8F4 /* PhotoViewController.swift in Sources */,
+				A3879287297D7DD100778BF9 /* Extension CGPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

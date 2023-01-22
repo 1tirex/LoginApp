@@ -17,11 +17,14 @@ final class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         welcomeLabel.text = "Welcome, \(welcome ?? "")"
         changeColor()
         settingBottom()
     }
-    
+}
+
+private extension WelcomeViewController {
     private func changeColor() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds

@@ -8,9 +8,8 @@
 import UIKit
 
 final class MyInfoViewController: UIViewController {
-
-    //MARK: - @IBOutlet
     
+    //MARK: - @IBOutlet
     @IBOutlet var name: UILabel!
     @IBOutlet var age: UILabel!
     @IBOutlet var from: UILabel!
@@ -26,7 +25,14 @@ final class MyInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+    }
+}
 
+private extension MyInfoViewController {
+    //MARK: - private func
+    private func setupUI() {
         name.text = "My name is \(person.info.name)"
         age.text = String(person.info.age) + " years"
         from.text = "from \(person.info.from)"
@@ -42,8 +48,6 @@ final class MyInfoViewController: UIViewController {
         customImage(for: me1)
     }
     
-    //MARK: - private func
-    
     private func customImage(for sender: UIImageView) {
         sender.layer.masksToBounds = false
         sender.layer.shadowRadius = 5
@@ -51,10 +55,21 @@ final class MyInfoViewController: UIViewController {
         sender.clipsToBounds = true
         sender.layer.cornerRadius = sender.frame.width/2
         
-        addBorderGradient(to: sender, startColor: UIColor.red, endColor: UIColor.blue, lineWidth: 5, startPoint: CGPoint.topLeft, endPoint: CGPoint.bottomRight)
+        addBorderGradient(to: sender,
+                          startColor: UIColor.red,
+                          endColor: UIColor.blue,
+                          lineWidth: 5,
+                          startPoint: CGPoint.topLeft,
+                          endPoint: CGPoint.bottomRight)
     }
     
-    private func addBorderGradient(to view: UIView, startColor:UIColor, endColor: UIColor, lineWidth: CGFloat, startPoint: CGPoint, endPoint: CGPoint) {
+    private func addBorderGradient(
+        to view: UIView,
+        startColor:UIColor,
+        endColor: UIColor,
+        lineWidth: CGFloat,
+        startPoint: CGPoint,
+        endPoint: CGPoint) {
         
         let gradient = CAGradientLayer()
         gradient.frame = view.bounds
@@ -63,7 +78,6 @@ final class MyInfoViewController: UIViewController {
         gradient.endPoint = endPoint
 
         let shape = CAShapeLayer()
-        
         shape.lineWidth = lineWidth
         shape.path = UIBezierPath(
         arcCenter: CGPoint(x: view.bounds.height/2,
@@ -77,18 +91,4 @@ final class MyInfoViewController: UIViewController {
         gradient.mask = shape
         view.layer.addSublayer(gradient)
         }
-}
-
-//MARK: - extension
-
-extension CGPoint {
-     static let topLeft = CGPoint(x: 0, y: 0)
-     static let topCenter = CGPoint(x: 0.5, y: 0)
-     static let topRight = CGPoint(x: 1, y: 0)
-static let centerLeft = CGPoint(x: 0, y: 0.5)
-     static let center = CGPoint(x: 0.5, y: 0.5)
-     static let centerRight = CGPoint(x: 1, y: 0.5)
-static let bottomLeft = CGPoint(x: 0, y: 1.0)
-     static let bottomCenter = CGPoint(x: 0.5, y: 1.0)
-     static let bottomRight = CGPoint(x: 1, y: 1)
 }

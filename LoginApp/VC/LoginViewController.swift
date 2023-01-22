@@ -8,18 +8,15 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-    
     //MARK: - @IBOutlet
     
     @IBOutlet var loginTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
     // MARK: - Constants
-    
     private let person = Person.getPerson()
     
     //MARK: - override func
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,14 +29,7 @@ final class LoginViewController: UIViewController {
         guard let tabBar = segue.destination as? UITabBarController else { return }
         guard let viewContolers = tabBar.viewControllers else { return }
         
-        for viewContoler in viewContolers {
-            if let navigationVC = viewContoler as? NavigationController {
-                guard let privateArea = navigationVC.topViewController as? PrivateAreaViewController else { return }
-                privateArea.person = person
-            } else if let welcomeVC = viewContoler as? WelcomeViewController {
-                welcomeVC.welcome = person.info.name
-            }
-        }
+        prepareData(viewContolers)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>,
@@ -50,7 +40,7 @@ final class LoginViewController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String,
                                      sender: Any?) -> Bool {
-        if loginTF.text == person.login && passwordTF.text == person.password {
+        if loginTF.text == person.login, passwordTF.text == person.password {
             return true
         } else {
             showAlert(with: "Oops!",
@@ -74,10 +64,22 @@ final class LoginViewController: UIViewController {
 }
 
 //MARK: - extension
-
-extension LoginViewController {
+private extension LoginViewController {
+    private func prepareData(_ viewContolers: [UIViewController]) {
+        for viewContoler in viewContolers {
+            if let navigationVC = viewContoler as? NavigationController {
+                guard let privateArea = navigationVC.topViewController as? PrivateAreaViewController
+                else {
+                    return
+                }
+                privateArea.person = person
+            } else if let welcomeVC = viewContoler as? WelcomeViewController {
+                welcomeVC.welcome = person.info.name
+            }
+        }
+    }
+    
     private func showAlert(with title: String, and massage: String) {
-        
         let alert = UIAlertController(title: title,
                                       message: massage,
                                       preferredStyle: .alert)
