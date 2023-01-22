@@ -2,7 +2,7 @@
 
 
 Just a learning app with a login screen and login info buttons.
-Inside is a gradient screen with an exits button and some information about me.
+Inside is a gradient screen with an exits button and some information about me. With using delegate.
 
 
 <code><img height="400" src="https://user-images.githubusercontent.com/108235206/213920881-c433250d-8f61-48da-8b57-95598b0e9678.png"></code>
